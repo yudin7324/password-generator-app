@@ -16,17 +16,6 @@ This is a password generator application built with React as part of a **Fronten
 - SASS
 - Vite
 
-## Getting Started
-
-### Installation
-Clone the repository and install dependencies:
-
-```sh
-git clone https://github.com/yudin7324/frontend-mentor-challenges/password-generator-app
-cd password-generator-app
-npm install
-```
-
 ### Running the Project
 Start the development server:
 
