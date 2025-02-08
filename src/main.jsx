@@ -5,6 +5,8 @@ import '@/styles/main.scss';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <App />
+    <div className='main'>
+      <App />
+    </div>
   </StrictMode>,
 )

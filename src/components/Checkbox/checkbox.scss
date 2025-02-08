@@ -1,0 +1,56 @@
+.checkbox {
+  display: flex;
+  gap: 20px;
+  height: 21px;
+  font-size: 16px;
+  cursor: pointer;
+  user-select: none; 
+  pointer-events: none; 
+
+  @media (min-width: 768px) {
+    height: 23px;
+    gap: 24px;
+    font-size: 18px;
+  }
+
+  &:not(:last-of-type) {
+    margin-bottom: 16px;
+
+    @media (min-width: 768px) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__field,
+  &__custom {
+    pointer-events: auto;
+    cursor: pointer;
+
+    &:hover {
+      .checkbox & + .checkbox__custom {
+        border-color: $color-neon-green;
+      }
+    }
+  }
+
+  &__field {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    position: absolute;
+
+    &:checked + .checkbox__custom {
+      border-color: $color-neon-green;
+      background: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='20' height='20' fill='%23A4FFAF' /%3E%3Cpath d='M4 10.6066L7.39341 14L15.3934 6' stroke='%2318171F' stroke-width='3' /%3E%3C/svg%3E") no-repeat center;
+    }
+  }
+
+  &__custom {
+    display: block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid $color-almost-white;
+    background: transparent;
+    cursor: pointer;
+  }
+}

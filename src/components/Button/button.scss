@@ -1,0 +1,34 @@
+.button {
+  height: 56px;
+  background-color: $color-neon-green;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 700;
+  color: $color-dark-grey;
+  margin-top: 16px;
+
+  @media (min-width: 768px) {
+    font-size: 18px;
+    gap: 24px;
+    height: 65px;
+    margin-top: 32px;
+  }
+
+  svg {
+    fill: $color-dark-grey;
+  }
+
+  &:hover {
+    color: $color-neon-green;
+    background-color: $color-dark-grey;
+    border: 2px solid $color-neon-green;
+
+    svg {
+      fill: $color-neon-green;
+    }
+  }
+}

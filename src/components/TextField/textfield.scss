@@ -1,0 +1,38 @@
+.textfield {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  padding: 0px 16px 0 22px;
+  background-color: $color-dark-grey;
+
+  @media (min-width: 768px) {
+    height: 80px;
+    padding: 0px 32px 0 28px;
+  }
+
+  &__field {
+    display: inline-block;
+    font-size: 24px;
+    color: $color-almost-white;
+    width: 100%;
+
+    @media (min-width: 768px) {
+      font-size: 32px;
+    }
+  }
+
+  &__button {
+    cursor: pointer;
+
+    &:hover {
+      svg {
+        fill: $color-white;
+      }
+    }
+
+    svg {
+      fill: $color-neon-green;
+    }
+  }
+}
