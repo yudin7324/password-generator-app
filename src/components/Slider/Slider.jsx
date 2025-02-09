@@ -13,16 +13,20 @@ function Slider({ onChange, value }) {
         <div className="slider__value">{value}</div>
       </div>
 
-      <input
-        className="slider__field"
-        type="range"
-        min="0"
-        max="20"
-        step="1"
-        value={value}
-        onChange={handleChange}
-        style={{'--slider-progress': `${(value / 20) * 100}%`,}}
-      />
+
+      <label htmlFor="slider-field" className="slider__label">
+        <input
+          className="slider__field"
+          id="slider-field"
+          type="range"
+          min="0"
+          max="20"
+          step="1"
+          value={value}
+          onChange={handleChange}
+          style={{'--slider-progress': `${(value / 20) * 100}%`,}}
+        />
+      </label>
     </div>
   )
 }

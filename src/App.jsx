@@ -74,7 +74,7 @@ function App() {
 
   return (
     <main className="app">
-      <div className='app__title'>Password Generator</div>
+      <h1 className='app__title'>Password Generator</h1>
       <div className='app__result'>
        <TextField value={password}/>
       </div>

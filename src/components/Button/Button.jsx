@@ -4,7 +4,7 @@ import './button.scss';
 
 function Button({ onClick }) {
   return (
-    <button className='button' onClick={onClick}>GENERATE <IconArrowRight /></button>
+    <button className='button' onClick={onClick} aria-label='generate button'>GENERATE <IconArrowRight /></button>
   )
 }
 

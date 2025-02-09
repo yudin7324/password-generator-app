@@ -32,6 +32,7 @@ function TextField({ value }) {
         className='textfield__button' 
         type='button' 
         onClick={handleCopy}
+        aria-label='copy button'
       >
         {copied ? 'COPIED' : ''}
         <IconCopy />
