@@ -6,6 +6,7 @@
   justify-content: center;
   gap: 16px;
   width: 100%;
+  font-family: inherit;
   font-size: 16px;
   font-weight: 700;
   color: $color-dark-grey;
@@ -22,13 +23,15 @@
     fill: $color-dark-grey;
   }
 
-  &:hover {
-    color: $color-neon-green;
-    background-color: $color-dark-grey;
-    border: 2px solid $color-neon-green;
-
-    svg {
-      fill: $color-neon-green;
+  @media (hover: hover) {
+    &:hover {
+      color: $color-neon-green;
+      background-color: $color-dark-grey;
+      border: 2px solid $color-neon-green;
+  
+      svg {
+        fill: $color-neon-green;
+      }
     }
   }
 }

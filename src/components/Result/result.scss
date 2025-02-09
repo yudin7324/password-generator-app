@@ -44,5 +44,29 @@
     width: 10px;
     height: 28px;
     border: 2px solid $color-almost-white;
+
+    &.active {
+     
+
+      &--red {
+        background-color: $color-red;
+        border-color: $color-red;
+      }
+
+      &--orange {
+        background-color: $color-orange;
+        border-color: $color-orange;
+      }
+
+      &--yellow {
+        background-color: $color-yellow;
+        border-color: $color-yellow;
+      }
+
+      &--green {
+        background-color: $color-neon-green;
+        border-color: $color-neon-green;
+      }
+    }
   }
 }

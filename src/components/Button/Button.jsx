@@ -1,10 +1,15 @@
 import IconArrowRight from '../Icons/IconArrowRight';
+import PropTypes from 'prop-types';
 import './button.scss';
 
-function Button() {
+function Button({ onClick }) {
   return (
-    <button className='button'>GENERATE <IconArrowRight /></button>
+    <button className='button' onClick={onClick}>GENERATE <IconArrowRight /></button>
   )
+}
+
+Button.propTypes = {
+  onClick: PropTypes.func.isRequired,
 }
 
 export default Button

@@ -1,8 +1,10 @@
-import { useState } from "react";
+import PropTypes from 'prop-types';
 import './slider.scss';
 
-function Slider() {
-  const [value, setValue] = useState(10);
+function Slider({ onChange, value }) {
+  function handleChange(event) {
+    onChange(event.target.value);
+  }
 
   return (
     <div className="slider">
@@ -14,15 +16,20 @@ function Slider() {
       <input
         className="slider__field"
         type="range"
-        min="1"
+        min="0"
         max="20"
         step="1"
         value={value}
-        onChange={(e) => setValue(Number(e.target.value))}
+        onChange={handleChange}
         style={{'--slider-progress': `${(value / 20) * 100}%`,}}
       />
     </div>
   )
+}
+
+Slider.propTypes = {
+  value: PropTypes.number.isRequired,
+  onChange: PropTypes.func.isRequired,
 }
 
 export default Slider

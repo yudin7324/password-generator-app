@@ -16,13 +16,27 @@
     font-size: 24px;
     color: $color-almost-white;
     width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
 
     @media (min-width: 768px) {
       font-size: 32px;
     }
+
+    &::placeholder {
+      opacity: 0.25;
+    }
   }
 
   &__button {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 18px;
+    color: $color-neon-green;
+    font-family: inherit;
+    font-weight: 700;
     cursor: pointer;
 
     &:hover {
