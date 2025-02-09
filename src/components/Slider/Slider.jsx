@@ -12,18 +12,21 @@ function Slider({ onChange, value }) {
         <div className="slider__text">Character Length</div>
         <div className="slider__value">{value}</div>
       </div>
-      <label htmlFor="slider-field" className="slider__label"></label>
-      <input
-        className="slider__field"
-        id="slider-field"
-        type="range"
-        min="0"
-        max="20"
-        step="1"
-        value={value}
-        onChange={handleChange}
-        style={{'--slider-progress': `${(value / 20) * 100}%`,}}
-      />
+
+
+      <label className="slider__label">
+        <input
+          className="slider__field"
+          type="range"
+          min="0"
+          max="20"
+          step="1"
+          value={value}
+          onChange={handleChange}
+          style={{'--slider-progress': `${(value / 20) * 100}%`,}}
+          aria-label="slider-range"
+        />
+      </label>
     </div>
   )
 }
