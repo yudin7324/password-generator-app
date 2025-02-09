@@ -81,7 +81,6 @@ function App() {
         <TextField value={password}/>
       </div>
       <div className='app__settings'>
-        <label htmlFor="password-length">Password Length: {characterValue}</label>
         <Slider 
           onChange={handleSlider} 
           value={characterValue} 

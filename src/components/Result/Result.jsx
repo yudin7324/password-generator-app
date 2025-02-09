@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import './result.scss';
-import { useEffect } from 'react';
 
 const initData = [
   { text: 'TOO WEAK!', value: 1, color: 'red' },
@@ -20,10 +19,6 @@ function calculateStrength(length, optionsCount) {
 function Result({ passwordLength, optionsCount }) {
   const strength = calculateStrength(passwordLength, optionsCount);
   const result = initData.find((item) => item.value === strength) || initData[0];
-
-  useEffect(() => {
-    strength
-  }, [strength]);
 
   return (
     <div className="result">
