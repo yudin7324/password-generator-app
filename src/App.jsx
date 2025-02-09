@@ -72,31 +72,34 @@ function App() {
     setPassword(newPassword);
   }
 
+  const selectedOptionsCount = checkboxData.filter((checkbox) => checkbox.isChecked).length;
+
   return (
     <main className="app">
       <h1 className='app__title'>Password Generator</h1>
       <div className='app__result'>
-       <TextField value={password}/>
+        <TextField value={password}/>
       </div>
       <div className='app__settings'>
+        <label htmlFor="password-length">Password Length: {characterValue}</label>
         <Slider 
           onChange={handleSlider} 
           value={characterValue} 
         />
-        {checkboxData.map((checkbox) => {
-          return <Checkbox 
+        {checkboxData.map((checkbox) => (
+          <Checkbox 
             key={checkbox.value} 
             text={checkbox.text} 
             value={checkbox.value}
             onChange={handleCheckboxChange}
             isChecked={checkbox.isChecked}
           />
-        })}
-        <Result value={checkboxData.filter((checkbox) => checkbox.isChecked).length}/>
-        <Button onClick={handleGeneratePassword} />
+        ))}
+        <Result passwordLength={characterValue} optionsCount={selectedOptionsCount}/>
+        <Button onClick={handleGeneratePassword}>Generate Password</Button>
       </div>
     </main>
-  )
+  );
 }
 
-export default App
+export default App;
